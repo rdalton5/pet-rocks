@@ -56,6 +56,7 @@ class PetRockController extends Controller {
      */
     public function show($id)
     {
+        // TODO: return a view rather than the plain object
         return PetRock::findOrFail($id);
     }
 

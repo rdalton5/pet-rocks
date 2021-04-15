@@ -13,6 +13,7 @@ class CreatePetRocksTable extends Migration
      */
     public function up()
     {
+        //TODO: add more rock attributes to this table
         Schema::create('pet_rocks', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
