@@ -1,4 +1,6 @@
 <form method="POST" action="{{$formAction}}">
+    @csrf
+    
     @if ($formMethod == "PUT")
         @method('PUT')
     @endif
