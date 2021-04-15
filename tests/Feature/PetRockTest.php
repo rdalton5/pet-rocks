@@ -9,6 +9,7 @@ use App\Models\PetRock;
 
 class PetRockTest extends TestCase {
 
+    // This refreshes the database between each test, so that we're working with a fresh data set.
     use RefreshDatabase;
 
     /** @test */
@@ -51,19 +52,6 @@ class PetRockTest extends TestCase {
         $response = $this->get("/petrock/1");
         $response->assertNotFound();
     }
-    
-
-    /** @test */
-    //This is now a view, idk how to test it.
-    /* public function all_pet_rocks_can_be_retrieved() {
-        PetRock::factory()->count(10)->create();
-
-        $response = $this->get("/petrock");
-        $retrievedPetRocks = json_decode($response->baseResponse->content());
-
-        $this->assertEquals(count($retrievedPetRocks), 10);
-
-    } */
 
      /** @test */
      public function a_pet_rock_can_be_updated() {
