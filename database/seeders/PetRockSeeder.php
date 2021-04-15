@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\PetRock;
 
 class PetRockSeeder extends Seeder
 {
@@ -13,6 +14,6 @@ class PetRockSeeder extends Seeder
      */
     public function run()
     {
-        //
+        PetRock::factory()->count(10)->create();
     }
 }
