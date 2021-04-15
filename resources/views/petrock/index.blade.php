@@ -8,7 +8,9 @@
             @foreach ($petRocks as $petRock)
                 <div class="card">
                     <div class="right">
-                        <form style="display:inline;"class="button-form" action="/petrock/{{ $petRock->id }}/edit">
+                        {{-- Make this edit button a form so that it looks like the delete button --}}
+                        <form class="button-form" action="/petrock/{{ $petRock->id }}/edit">
+                            {{-- a pencil icon --}}
                             <button style="font-size: 1.5em" type="submit">&#9998;</button>
                         </form>
                         <x-delete-button deleteRoute="/petrock/{{ $petRock->id }}" />

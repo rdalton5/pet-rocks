@@ -18,4 +18,5 @@ Route::get('/', function () {
     return redirect('/petrock');
 });
 
+// This creates all the CRUD routes we need
 Route::resource('petrock', PetRockController::class);

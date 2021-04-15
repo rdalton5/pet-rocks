@@ -83,6 +83,7 @@ class PetRockController extends Controller {
     {
         $petRock = PetRock::findOrFail($id);
 
+        //Is there a shorthand way to do this "if exists then assign" from the input set?
         if($request->has("name")){
             $petRock->name = $request->input("name");
         }
